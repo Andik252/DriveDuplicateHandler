@@ -1,13 +1,13 @@
 # Google Drive Duplicate File Remover
 
 ## Deskripsi
-Program ini bertujuan untuk mendeteksi dan menangani file duplikat yang ada di **Google Drive**. Program ini memindai **seluruh folder dan subfolder** yang ada di **My Drive**, termasuk folder yang di-share ke Anda yang dipindahkan sebagai **shortcut** ke My Drive. Setelah memindai folder utama dan subfolder, program akan mencari file dengan nama yang sama dan memprosesnya.
+Program ini dirancang untuk mendeteksi dan mengelola **file duplikat berdasarkan nama file** di Google Drive. Program ini memindai **semua folder** yang ada di **My Drive**, termasuk folder yang di-share dan dipindahkan ke **My Drive** sebagai shortcut. Program akan memindai folder utama dan subfolder secara rekursif untuk mencari file yang memiliki **nama yang sama**.
 
-Ketika file duplikat ditemukan, program akan memilih **file yang terlama di-upload** untuk dipertahankan di dalam folder tersebut. File-file lainnya akan **dikeluarkan dari folder**, tetapi tetap akan berada di dalam Google Drive Anda. Artinya, file tersebut tidak dihapus, hanya dipindahkan keluar dari folder yang bersangkutan. Program juga memberikan pilihan untuk mengunduh hasil proses dalam bentuk file teks.
+Setelah mendeteksi file duplikat berdasarkan nama, program akan memilih hanya **1 file yang terlama di-upload** dan mengeluarkan file lainnya dari folder tersebut. File yang dikeluarkan dari folder tidak akan dihapus, tetapi tetap berada di Google Drive Anda, hanya tidak lagi berada di dalam folder yang bersangkutan. Program juga menyediakan opsi bagi pengguna untuk mengunduh hasil outputnya dalam bentuk file teks.
 
 ### Fitur Utama:
-- Mendeteksi file duplikat di seluruh folder dan subfolder Google Drive Anda.
-- Memeriksa folder yang dipindahkan ke My Drive sebagai shortcut dan mengakses file target shortcut.
-- Mengelola duplikat berdasarkan nama file, dengan hanya **menyisakan satu file yang terlama di-upload** dalam folder. File duplikat lainnya **dikeluarkan dari folder** tanpa dihapus, tetap ada di Google Drive.
-- Mendukung pemrosesan folder yang dibagikan dan folder pintasan.
-- Menyediakan opsi untuk mengunduh laporan hasil pemrosesan dalam bentuk file teks.
+- **Deteksi file duplikat berdasarkan nama file** di seluruh folder dan subfolder di Google Drive.
+- Mengidentifikasi folder yang dipindahkan sebagai shortcut ke My Drive.
+- Mengelola file duplikat dengan hanya menyisakan satu file (yang terlama di-upload) di dalam folder. File lainnya akan **dikeluarkan dari folder** dan tetap ada di Google Drive.
+- Mendukung folder yang dibagikan dan folder pintasan.
+- Menyediakan opsi untuk mengunduh hasil deteksi duplikat dalam file teks.
