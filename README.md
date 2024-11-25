@@ -1,17 +1,15 @@
 # Google Drive Duplicate File Remover
 
 ## Deskripsi
-Program ini dibuat untuk mendeteksi dan mengelola **file duplikat** di Google Drive dengan cara yang efisien. Program ini akan memindai **semua folder** di **My Drive**, termasuk folder yang dibagikan dan folder yang dipindahkan ke **My Drive** sebagai shortcut. Ini memungkinkan Anda untuk mengelola duplikat di seluruh folder, bahkan di subfolder, tanpa perlu memeriksa satu per satu.
+Program ini dirancang untuk mendeteksi dan mengelola file duplikat di Google Drive, dengan fokus pada **pengelolaan file berdasarkan nama**. Program ini akan memindai seluruh isi **My Drive**, termasuk folder utama dan subfolder, serta folder yang dipindahkan atau dibuat sebagai **shortcut** ke My Drive. 
 
-Program ini bekerja dengan cara mendeteksi file-file yang memiliki **nama yang sama**, kemudian memilih file yang **terlama di-upload** dan mengeluarkan file lainnya dari folder tersebut. **Penting untuk dicatat**: file yang dikeluarkan dari folder tidak dihapus dari Google Drive, melainkan hanya dipindahkan keluar dari folder yang bersangkutan. Dengan demikian, file tetap ada di Google Drive, hanya tidak berada di dalam folder yang dipilih.
+Program bekerja dengan cara mendeteksi **file yang memiliki nama yang sama** di dalam satu folder atau subfolder. Setelah file duplikat terdeteksi, program akan memilih **hanya 1 file yang terlama di-upload** untuk dipertahankan di dalam folder. **File lainnya yang duplikat akan dikeluarkan dari folder**, namun tetap berada di **Google Drive Anda**. Artinya, file yang dikeluarkan tidak dihapus, hanya dipindahkan keluar dari folder yang bersangkutan, dan masih bisa diakses di Drive Anda.
 
-Setelah proses selesai, pengguna akan mendapatkan opsi untuk **mengunduh laporan** berupa file teks yang mencatat semua file yang dikeluarkan, sehingga memberikan transparansi penuh mengenai file mana yang telah diproses.
+Proses ini bertujuan untuk menjaga kebersihan dan efisiensi penyimpanan dalam folder Anda, tanpa menghilangkan file secara permanen. Program juga menyediakan **opsi untuk mengunduh hasil deteksi duplikat** dalam bentuk file teks, agar Anda bisa melakukan pencatatan atau backup terhadap hasil tersebut.
 
 ### Fitur Utama:
-- **Deteksi Duplikat di Seluruh Folder**: Program ini memindai seluruh folder dan subfolder di My Drive Anda untuk mencari file yang memiliki nama yang sama (duplikat), termasuk folder yang dipindahkan ke My Drive sebagai shortcut.
-  
-- **Pengelolaan Duplikat Berdasarkan Nama**: Program akan memilih hanya **satu file yang terlama di-upload** dan mengeluarkan file lainnya dari folder yang dipilih. **File tidak dihapus**, hanya dipindahkan keluar dari folder tersebut, sehingga tetap tersimpan di Google Drive.
-
-- **Mendukung Folder Pintasan dan Berbagi**: Program ini juga dapat memindai dan mengelola folder yang dibagikan ke Anda atau folder yang merupakan pintasan ke folder lain di Google Drive.
-
-- **Mengunduh Hasil Laporan**: Setelah proses pengelolaan file selesai, Anda dapat mengunduh laporan yang merinci file yang telah dipindahkan. Ini memberikan Anda gambaran lengkap tentang file yang telah diproses dan dipindahkan keluar dari folder.
+- **Pindai Folder dan Subfolder**: Program akan memindai semua folder dan subfolder di My Drive untuk mencari file dengan nama yang sama.
+- **Dukungan Folder Pintasan**: Program dapat mendeteksi dan memindai folder yang dipindahkan ke My Drive sebagai shortcut, serta folder yang dibagikan.
+- **Deteksi File Duplikat**: Program akan mengidentifikasi file duplikat berdasarkan **nama file** yang sama, tanpa mengubah file yang ada di Google Drive Anda.
+- **Pilih File Terlama**: Hanya satu file yang terlama di-upload yang akan dipertahankan di dalam folder. File lainnya yang memiliki nama yang sama akan **dikeluarkan dari folder**, namun tetap tersedia di Google Drive Anda.
+- **Penyimpanan Hasil Deteksi**: Program memberikan opsi kepada pengguna untuk mengunduh hasil deteksi duplikat dalam bentuk file teks, yang berisi informasi tentang file yang dikeluarkan dari folder.
