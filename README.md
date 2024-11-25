@@ -1,75 +1,74 @@
 # Google Drive Duplicate File Remover
 
 ## Deskripsi
-Program ini dirancang untuk mendeteksi dan mengelola file duplikat di Google Drive Anda berdasarkan nama file. Program ini akan:
+Program ini dirancang untuk mendeteksi dan menghapus file duplikat di Google Drive berdasarkan nama file. Program ini memindai **semua folder** yang ada di **My Drive**, termasuk folder yang di-share dan dipindahkan ke **My Drive** sebagai shortcut. Program akan memindai folder utama dan subfolder secara rekursif untuk mencari file yang memiliki nama yang sama. 
 
-1. **Membaca Semua Folder di My Drive**: Skrip ini memindai semua folder yang ada di akun Google Drive Anda, termasuk folder utama dan pintasan ke folder berbagi (sharing folders) yang ditambahkan ke My Drive.
-   
-2. **Mendeteksi File Duplikat**: Program akan memeriksa setiap folder dan subfolder untuk menemukan file dengan nama yang sama (duplikat). File yang dianggap duplikat akan dikelompokkan berdasarkan nama file.
+Setelah mendeteksi file duplikat, program akan memilih hanya **1 file yang terlama di-upload** dan mengeluarkan file lainnya dari folder tersebut. Ini dilakukan untuk menghindari adanya beberapa file duplikat dengan nama yang sama di dalam satu folder atau subfolder. Program juga menyediakan opsi bagi pengguna untuk mengunduh hasil outputnya dalam bentuk file teks.
 
-3. **Menangani Duplikat**: Dari setiap kelompok file duplikat, hanya satu file yang akan dipertahankan. Program memilih file yang terlama diupload dan mengeluarkan file lainnya dari folder.
-
-4. **Membaca Folder dan Subfolder**: Program secara rekursif akan membaca folder dan subfolder dalam Google Drive untuk mendeteksi duplikat, memastikan tidak ada file duplikat yang terlewat.
-
-5. **Mengeluarkan File dari Folder**: Setelah mendeteksi file duplikat, program akan mengeluarkan file yang tidak dipilih dari folder, sehingga hanya satu file yang tersisa di folder tersebut.
+### Fitur Utama:
+- Mendeteksi file duplikat di seluruh folder dan subfolder di Google Drive.
+- Mengidentifikasi folder yang dipindahkan sebagai shortcut ke My Drive.
+- Menghapus duplikat berdasarkan nama file, hanya menyisakan satu file (yang terlama diupload).
+- Mendukung folder yang dibagikan dan folder pintasan.
+- Menyediakan opsi untuk mengunduh hasil deteksi duplikat dalam file teks.
 
 ## Cara Instalasi
 
-1. **Persiapkan Google Colab**:
-   - Program ini dirancang untuk dijalankan di Google Colab. Pastikan Anda memiliki akun Google dan dapat mengakses Google Colab.
+### 1. Clone Repositori
+Clone repositori ini ke dalam direktori lokal Anda:
+```bash
+git clone https://github.com/username/repository-name.git
+```
 
-2. **Clone Repositori**:
-   Clone repositori ini ke dalam Google Colab atau mesin lokal Anda:
-   ```bash
-   git clone https://github.com/Username/Google-Drive-Duplicate-File-Remover.git
-   ```
+### 2. Instalasi Dependensi
+Skrip ini memerlukan beberapa pustaka Python, seperti `google-auth`, `google-api-python-client`, dan `google-colab`. Instal dependensi tersebut dengan menjalankan perintah berikut:
+```bash
+pip install --upgrade google-auth google-api-python-client google-colab
+```
 
-3. **Install Dependensi**:
-   Skrip ini menggunakan `google-auth` dan `google-api-python-client` untuk berinteraksi dengan Google Drive API. Pastikan untuk menginstal dependensi berikut di Google Colab:
-   ```python
-   !pip install --upgrade google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
-   ```
+### 3. Autentikasi Google
+Program ini membutuhkan autentikasi Google untuk mengakses Google Drive Anda. Pastikan Anda sudah memiliki akses ke Google Drive dan dapat mengautentikasi melalui akun Google Anda. Program ini menggunakan `google.colab.auth` untuk autentikasi.
 
-4. **Jalankan Skrip**:
-   Setelah menginstal dependensi, Anda dapat menjalankan skrip di Google Colab. Cukup pastikan bahwa Anda telah mengautentikasi akun Google Anda dengan benar menggunakan `auth.authenticate_user()`.
+### 4. Menyiapkan dan Menjalankan Program
+Setelah dependensi diinstal dan autentikasi selesai, Anda bisa menjalankan skrip dengan langkah berikut:
+```bash
+python script.py
+```
+
+Program akan meminta Anda untuk memilih folder dari daftar folder yang ada di My Drive. Pilih folder yang ingin Anda periksa untuk file duplikat, dan program akan mulai memindai dan mengelola file duplikat.
+
+## Cara Kerja Program
+
+1. **Mendapatkan Daftar Folder**: Program pertama-tama akan mendaftar semua folder dan pintasan di My Drive, kecuali folder yang dikecualikan (seperti "Colab Notebooks").
+   
+2. **Memindai Folder dan Subfolder**: Setelah memilih folder, program akan memindai folder utama dan seluruh subfolder secara rekursif untuk mencari file dengan nama yang sama.
+
+3. **Mendeteksi File Duplikat**: Program kemudian akan mengidentifikasi file duplikat berdasarkan nama. Jika ada lebih dari satu file dengan nama yang sama, program akan memilih file yang terlama diupload dan mengeluarkan file lainnya dari folder.
+
+4. **Menghapus Duplikat**: File yang terdeteksi sebagai duplikat selain file yang terlama akan dipindahkan keluar dari folder yang dipilih.
+
+5. **Menyimpan Hasil dan Unduh**: Setelah proses selesai, program akan menunjukkan hasil dan memberikan opsi untuk mengunduh file teks yang berisi hasil dari proses penghapusan file duplikat.
 
 ## Cara Menjalankan Program
 
-1. **Autentikasi Akun Google**:
-   - Program ini memerlukan autentikasi untuk mengakses Google Drive Anda. Di Colab, Anda akan diminta untuk login dan memberikan izin akses.
+1. **Jalankan Program**:
+   Setelah mengikuti langkah instalasi, jalankan skrip dengan:
+   ```bash
+   python script.py
+   ```
 
-2. **Pilih Folder untuk Diperiksa**:
-   - Setelah autentikasi berhasil, program akan menampilkan daftar folder utama di Google Drive Anda. Pilih folder yang ingin Anda periksa untuk duplikat dengan memasukkan nama atau nomor folder.
+2. **Autentikasi dan Pilih Folder**:
+   - Program akan meminta Anda untuk memilih folder dari daftar folder di Google Drive.
+   - Masukkan nomor atau nama folder yang ingin Anda proses.
 
-3. **Proses Duplikat**:
-   - Program akan memindai folder yang dipilih dan semua subfoldernya untuk mencari file duplikat berdasarkan nama. Setelah itu, program akan memilih satu file yang terlama diupload dan mengeluarkan file lainnya.
+3. **Proses Deteksi Duplikat**:
+   - Program akan memindai folder dan subfolder untuk mendeteksi file duplikat berdasarkan nama.
+   - File yang duplikat akan dikeluarkan dari folder dan hanya menyisakan file yang terlama diupload.
 
-4. **Mengunduh Hasil**:
-   - Setelah proses selesai, Anda akan diberikan opsi untuk mengunduh hasilnya dalam bentuk file teks yang berisi laporan tentang file yang dipertahankan dan yang dikeluarkan.
+4. **Unduh Hasil Output**:
+   - Setelah proses selesai, Anda akan diberi pilihan untuk mengunduh hasilnya dalam bentuk file teks yang berisi informasi file yang dikeluarkan.
 
 ## Catatan Penting
-
-- **Hati-Hati dengan Penghapusan**: Program ini akan mengeluarkan file dari folder Anda. Pastikan Anda telah memeriksa file duplikat sebelum menjalankan program, karena file yang dikeluarkan tidak dapat dikembalikan.
-  
-- **Rate Limiting Google API**: Google API memiliki batasan permintaan. Jika Anda memiliki banyak file untuk diproses, Anda mungkin akan mengalami pembatasan dalam jumlah permintaan yang dapat dilakukan dalam waktu tertentu.
-
-- **Pintasan Folder**: Program ini juga dapat mendeteksi dan memindai folder pintasan yang mengarah ke folder berbagi. Pastikan Anda tidak melewatkan folder berbagi yang Anda akses melalui pintasan.
-
-## Struktur Program
-1. **list_files_in_folder_recursive**: Fungsi ini untuk memindai folder dan subfolder secara rekursif dan mendeteksi semua file.
-2. **find_duplicate_files**: Mengelompokkan file berdasarkan nama untuk menemukan duplikat.
-3. **remove_file_from_folder**: Mengeluarkan file dari folder jika terdeteksi sebagai duplikat.
-4. **write_output_to_file**: Menulis hasil proses ke file teks.
-5. **prompt_for_download**: Meminta pengguna untuk mengunduh hasil output.
-6. **main_program**: Fungsi utama yang menjalankan seluruh proses.
-
-## Penanganan Error
-
-- Jika terjadi kesalahan selama proses, program akan menangani exception dan mencetak pesan error yang sesuai. Pastikan untuk memeriksa log output jika terjadi masalah.
-
----
-
-**Sumber Daya Tambahan**:
-- [Google Drive API Documentation](https://developers.google.com/drive)
-- [Google Colab Documentation](https://colab.research.google.com)
-```
+- **Hati-hati dengan Penghapusan**: Skrip ini akan menghapus file duplikat yang ditemukan. Pastikan untuk memeriksa dengan cermat file yang ada di folder sebelum menjalankan skrip.
+- **Pembatasan API Google Drive**: API Google Drive memiliki batasan permintaan per detik. Jika Anda memiliki banyak file untuk diproses, pastikan untuk menangani rate limiting sesuai dengan kebijakan API.
+- **Penggunaan Folder Pintasan**: Program ini juga dapat memindai folder yang dipindahkan ke My Drive sebagai shortcut dan mengakses target dari pintasan tersebut.
