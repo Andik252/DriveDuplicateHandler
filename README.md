@@ -36,5 +36,15 @@ Program akan memindai folder dan subfolder untuk mendeteksi file dengan nama yan
 Setelah proses selesai, Anda akan diberikan opsi untuk mengunduh hasil deteksi duplikat dalam bentuk file teks.
 
 ## Catatan Penting
-- **Hati-hati dengan Pengeluaran File**: File yang dikeluarkan dari folder tetap ada di Google Drive Anda, hanya saja tidak lagi berada di folder yang dipilih. Pastikan Anda telah memeriksa file yang ingin diproses sebelum menjalankan skrip.
-- **Pembatasan API Google Drive**: Google Drive API memiliki pembatasan jumlah permintaan per detik. Jika Anda memiliki banyak file untuk diproses, pastikan untuk menangani rate limiting sesuai dengan kebijakan API.
+
+1. **File yang Dikeluarkan dari Folder**:  
+   - File yang terdeteksi duplikat **tidak akan dihapus**, tetapi hanya **dikeluarkan dari folder**.  
+   - File tersebut tetap berada di My Drive Anda. Jika Anda adalah pengunggahnya, file akan muncul di halaman utama My Drive.  
+   - Untuk file yang diunggah oleh orang lain atau berasal dari folder berbagi, file mungkin tidak muncul di My Drive Anda dan akan kembali ke My Drive pengunggah asli.  
+
+2. **Persiapkan Struktur Folder**:  
+   - Program akan memindai seluruh folder dan subfolder di My Drive, termasuk folder berbagi yang dipindahkan sebagai pintasan.  
+   - Jika hanya ingin memindai folder tertentu, buat pintasan folder tersebut ke My Drive sebelum menjalankan program.  
+
+3. **Uji Program Terlebih Dahulu**:  
+   - Sebelum digunakan pada folder asli, uji program dengan folder percobaan untuk memastikan hasilnya sesuai dengan harapan. Ini mencegah kesalahan pada file yang penting.  
