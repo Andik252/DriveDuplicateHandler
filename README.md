@@ -1,50 +1,50 @@
-# Google Drive Duplicate File Remover  
+# Google Drive Duplicate File Remover
 
 ## Deskripsi  
-Program ini **mendeteksi file duplikat di Google Drive berdasarkan nama file**. Program memindai **semua folder** di **My Drive**, termasuk folder yang di-share atau yang dipindahkan sebagai shortcut. Setelah mendeteksi duplikat, hanya **file yang terlama diupload** yang akan tetap di folder, sementara file lainnya akan **dikeluarkan dari folder** (tetap ada di Google Drive).  
+Program ini **mendeteksi file duplikat berdasarkan nama file** di **My Drive** dan subfoldernya. Program memilih **file yang terlama diupload** dan **mengeluarkan file duplikat dari folder**, namun file yang dikeluarkan tetap ada di Google Drive pengguna.
 
-### Fitur Utama:  
-- Mendeteksi duplikat berdasarkan **nama file** di seluruh folder dan subfolder.  
-- Mengidentifikasi folder yang dibagikan dan pintasan yang dipindahkan ke My Drive.  
-- Mengeluarkan duplikat dari folder, menyisakan **1 file yang terlama diupload** (file tetap ada di Google Drive).  
-- Menyediakan opsi untuk mengunduh hasil dalam file teks.  
+### Fitur Utama:
+- Deteksi duplikat berdasarkan **nama file** di seluruh folder.
+- Mengidentifikasi folder berbagi dan pintasan di My Drive.
+- **Mengeluarkan file duplikat** dan hanya menyisakan **file yang terlama diupload**.
+- Opsi untuk mengunduh hasil deteksi dalam file teks.
 
-## Cara Instalasi dan Menjalankan Program  
+## Cara Instalasi dan Menjalankan Program
 
-### 1. Unduh Skrip Python  
-Jalankan perintah berikut untuk mengunduh skrip Python:  
-```bash  
-curl -O https://raw.githubusercontent.com/username/repository-name/refs/heads/main/script.py  
-```  
+1. **Unduh Skrip Python**  
+   Jalankan perintah berikut:  
+   ```bash  
+   curl -O https://raw.githubusercontent.com/username/repository-name/refs/heads/main/script.py  
+   ```
 
-### 2. Jalankan Program  
-Setelah mengunduh skrip, jalankan program dengan perintah:  
-```bash  
-python script.py  
-```  
+2. **Jalankan Program**  
+   Setelah mengunduh skrip, jalankan dengan perintah:  
+   ```bash  
+   python script.py  
+   ```
 
-### 3. Autentikasi Google  
-Login ke akun Google untuk memberi izin akses ke Google Drive Anda.  
+3. **Autentikasi Google**  
+   Program akan meminta autentikasi Google untuk mengakses Google Drive Anda.
 
-### 4. Pilih Folder untuk Proses Duplikat  
-Program akan menampilkan daftar folder My Drive. Pilih folder untuk diproses dengan memasukkan nomor atau nama folder.  
+4. **Pilih Folder**  
+   Pilih folder yang ingin diproses dengan memasukkan nomor atau nama folder yang muncul setelah autentikasi.
 
-### 5. Proses Deteksi Duplikat  
-Program akan memindai folder dan subfolder. Duplikat yang ditemukan akan dipilih berdasarkan file **terlama diupload**, dan file lainnya akan dikeluarkan dari folder (tetap di Drive).  
+5. **Proses Duplikat**  
+   Program akan memindai dan memilih **file yang terlama diupload** dan **mengeluarkan file lainnya** dari folder (file tetap ada di Drive).
 
-### 6. Unduh Hasil  
-Setelah selesai, Anda dapat mengunduh hasil deteksi dalam file teks.  
+6. **Unduh Hasil**  
+   Anda akan diberikan opsi untuk mengunduh hasil deteksi duplikat dalam file teks.
 
-## Catatan Penting  
+## Catatan Penting
 
 1. **File yang Dikeluarkan dari Folder**:  
-   - File **tidak dihapus**, hanya **dikeluarkan dari folder**.  
-   - File tetap ada di My Drive, dan jika Anda pengunggahnya, akan muncul di halaman utama My Drive.  
-   - Untuk file yang diunggah orang lain, file mungkin tidak muncul di My Drive Anda dan kembali ke pengunggah asli.  
+   - File tidak dihapus, hanya **dikeluarkan dari folder** dan tetap ada di Google Drive.
+   - Jika Anda adalah pengunggah, file akan muncul di My Drive Anda.  
+   - Untuk file yang diunggah oleh orang lain, file mungkin tidak muncul di My Drive Anda dan akan kembali ke pengunggah asli.
 
 2. **Persiapkan Struktur Folder**:  
-   - Program memindai seluruh folder dan subfolder, termasuk folder berbagi dan pintasan.  
-   - Jika hanya ingin memindai folder tertentu, buat pintasan folder ke My Drive sebelum menjalankan program.  
+   - Program akan memindai semua folder dan subfolder, termasuk folder pintasan.
+   - Jika ingin memindai folder tertentu, buat pintasan folder ke My Drive.
 
 3. **Uji Program Terlebih Dahulu**:  
-   - Uji program pada folder percobaan untuk memastikan hasilnya sesuai harapan.  
+   - Cobalah program pada folder percobaan sebelum digunakan pada folder asli untuk menghindari kesalahan.
