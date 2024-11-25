@@ -3,12 +3,6 @@
 ## Deskripsi
 Program ini dirancang untuk **mendeteksi file duplikat di Google Drive berdasarkan nama file**. Program ini memindai **semua folder** di **My Drive**, termasuk folder yang di-share atau yang dipindahkan sebagai shortcut ke My Drive. Setelah mendeteksi file duplikat, program akan memilih **file yang terlama diupload** dan **mengeluarkan file lainnya dari folder** (tetapi file tersebut tetap ada di Google Drive pengguna, hanya tidak ada lagi di folder tersebut).
 
-### Fitur Utama:
-- Mendeteksi **file duplikat berdasarkan nama file** di seluruh folder dan subfolder di Google Drive.
-- Mengidentifikasi folder yang dibagikan dan folder pintasan yang dipindahkan ke My Drive.
-- **Mengeluarkan file duplikat dari folder** dan hanya menyisakan **1 file yang terlama diupload** (file yang dikeluarkan tetap ada di Google Drive).
-- Menyediakan opsi untuk mengunduh hasil deteksi duplikat dalam file teks.
-
 ## Cara Instalasi dan Menjalankan Program
 
 ### 1. Unduh Skrip Python
