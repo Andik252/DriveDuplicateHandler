@@ -36,7 +36,8 @@ Setelah skrip diunduh, jalankan program menggunakan perintah berikut:
 
 ## Catatan Penting
 
-- **File Tidak Dihapus Permanen**: File yang dikeluarkan dari folder tidak akan dihapus secara permanen dari Google Drive Anda. Mereka tetap akan ada di My Drive Anda. Namun, jika file tersebut diunggah oleh orang lain, file bisa hilang atau kembali muncul di My Drive orang yang mengunggahnya.
+- **File Tidak Dihapus Permanen**: File yang dikeluarkan dari FOLDER tidak akan dihapus secara permanen dari Google Drive Anda. Mereka tetap akan ada di Halaman My Drive Anda. Namun,
+  >Jika file tersebut diupload oleh orang lain (file shering), **FILE BISA HILANG.** alias File akan *kembali muncul di My Drive orang yang **Mengunggahnya**, bukan My Drive Anda*.
 
 - **Folder Pintasan**: Program ini dapat membaca folder yang sudah Anda tambahkan sebagai pintasan di My Drive, termasuk folder berbagi. Pastikan folder yang ingin dipindai telah ditambahkan sebagai pintasan di My Drive.
 
