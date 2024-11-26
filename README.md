@@ -22,8 +22,6 @@ Jalankan perintah berikut di Google Colab untuk mengunduh skrip Python ini dari 
 ```bash
 !curl -O https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/script.py
 ```
-> **Catatan**: Ganti `USERNAME` dan `REPOSITORY` dengan nama pengguna dan repositori GitHub yang sesuai.
-
 ### 3. **Jalankan Program**
 Setelah skrip diunduh, jalankan program menggunakan perintah berikut:  
 ```python
