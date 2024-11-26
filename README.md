@@ -35,3 +35,11 @@ Setelah skrip diunduh, jalankan program menggunakan perintah berikut:
 4. **Unduh Laporan (Opsional)**: Setelah proses selesai, Anda dapat mengunduh laporan hasil scan sebagai file teks.
 
 ## Catatan Penting
+
+- **File Tidak Dihapus Permanen**: File yang dikeluarkan dari folder tidak akan dihapus secara permanen dari Google Drive Anda. Mereka tetap akan ada di My Drive Anda. Namun, jika file tersebut diunggah oleh orang lain, file bisa hilang atau kembali muncul di My Drive orang yang mengunggahnya.
+
+- **Folder Pintasan**: Program ini dapat membaca folder yang sudah Anda tambahkan sebagai pintasan di My Drive, termasuk folder berbagi. Pastikan folder yang ingin dipindai telah ditambahkan sebagai pintasan di My Drive.
+
+- **Persiapkan My Drive Anda**: Sebelum menjalankan program, disarankan untuk merapikan My Drive Anda. Hal ini akan membantu menghindari kebingungan saat file yang dikeluarkan dari folder muncul kembali di halaman utama My Drive Anda. Jika My Drive Anda berantakan, bisa jadi Anda kesulitan menemukan file tersebut setelah dipindahkan.
+
+- **Pengujian Sebelum Penggunaan**: Sebaiknya, uji program ini terlebih dahulu pada folder percobaan sebelum menggunakannya pada folder yang berisi data penting. Ini akan membantu Anda memahami cara kerja program dan menghindari kesalahan yang tidak diinginkan.
