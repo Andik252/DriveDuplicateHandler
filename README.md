@@ -39,8 +39,8 @@ Setelah skrip diunduh, jalankan program menggunakan perintah berikut:
 - **File Tidak Dihapus Permanen**: File yang dikeluarkan dari FOLDER tidak akan dihapus secara permanen dari Google Drive Anda. Mereka tetap akan ada di Halaman My Drive Anda. Namun,
   >Jika file tersebut diupload oleh orang lain (file shering), **FILE BISA HILANG.** alias File akan *kembali muncul di My Drive orang yang **Mengunggahnya**, bukan My Drive Anda*.
 
-- **Folder Pintasan**: Program ini dapat membaca folder yang telah Anda tambahkan sebagai pintasan di My Drive, termasuk folder berbagi. Pastikan folder yang ingin dipindai telah ditambahkan sebagai pintasan di My Drive.  
-  Jika Anda hanya ingin memindai folder tertentu dan bukan seluruh struktur folder, Anda dapat membuat pintasan untuk folder yang diinginkan saja. Misalnya, jika Anda memiliki Folder **A** yang berisi Subfolder **B** dan **C**, dan hanya ingin memindai Subfolder **C**, Anda cukup membuat pintasan untuk **Subfolder C** di My Drive. Dengan cara ini, program hanya akan memindai folder yang telah Anda pilih, tanpa memindai folder yang lebih besar atau seluruh hierarki folder.
+- **Folder Pintasan**: Program ini dapat membaca folder yang telah Anda tambahkan sebagai pintasan di My Drive, termasuk folder berbagi. Pastikan folder yang ingin dipindai telah ditambahkan sebagai pintasan di My Drive.
+>Jika Anda hanya ingin memindai folder tertentu dan bukan seluruh struktur folder, Anda dapat membuat pintasan untuk folder yang diinginkan saja. Misalnya, jika Anda memiliki Folder **A** yang berisi Subfolder **B** dan **C**, dan hanya ingin memindai Subfolder **C**, Anda cukup membuat pintasan untuk **Subfolder C** di My Drive. Dengan cara ini, program hanya akan memindai folder yang telah Anda pilih, tanpa memindai folder yang lebih besar atau seluruh hierarki folder.
 
 - **Persiapkan My Drive Anda**: Sebelum menjalankan program, disarankan untuk merapikan My Drive Anda. Hal ini akan membantu menghindari kebingungan saat file yang dikeluarkan dari folder muncul kembali di halaman utama My Drive Anda. Jika My Drive Anda berantakan, bisa jadi Anda kesulitan menemukan file tersebut setelah dipindahkan.
 
