@@ -1,50 +1,39 @@
-# Google Drive Duplicate File Remover
+# Google Drive Duplicate File Cleaner
 
-## Deskripsi  
-Program ini **mendeteksi file duplikat berdasarkan nama file** di **My Drive** dan subfoldernya. Program memilih **file yang terlama diupload** dan **mengeluarkan file duplikat dari folder**, namun file yang dikeluarkan tetap ada di Google Drive pengguna.
+## Deskripsi
 
-### Fitur Utama:
-- Deteksi duplikat berdasarkan **nama file** di seluruh folder.
-- Mengidentifikasi folder berbagi dan pintasan di My Drive.
-- **Mengeluarkan file duplikat** dan hanya menyisakan **file yang terlama diupload**.
-- Opsi untuk mengunduh hasil deteksi dalam file teks.
+**Google Drive Duplicate File Cleaner** adalah program Python yang dirancang untuk mendeteksi dan menangani file duplikat di Google Drive berdasarkan **nama file**. Program ini membaca semua folder utama dan subfolder di My Drive, termasuk folder berbagi yang telah ditambahkan sebagai pintasan ke My Drive. 
 
-## Cara Instalasi dan Menjalankan Program
+**Fitur Utama**:
+1. **Deteksi File Duplikat**: Mengidentifikasi file dengan nama yang sama di folder utama dan subfolder.
+2. **Pemilihan File Terlama**: Dari file duplikat yang terdeteksi, program akan memilih satu file yang **terlama diunggah** untuk dipertahankan.
+3. **Penghapusan dari Folder**: File lainnya akan **dikeluarkan dari folder** namun tetap tersedia di Google Drive Anda (tidak dihapus permanen).
+4. **Kompatibilitas dengan Pintasan**: Program dapat membaca folder berbagi jika telah ditambahkan sebagai pintasan ke My Drive.
 
-1. **Unduh Skrip Python**  
-   Jalankan perintah berikut:  
-   ```bash  
-   curl -O https://raw.githubusercontent.com/username/repository-name/refs/heads/main/script.py  
-   ```
+Proses ini memastikan setiap nama file hanya muncul sekali dalam setiap folder, menghindari duplikasi dan menjaga keteraturan Google Drive Anda.
 
-2. **Jalankan Program**  
-   Setelah mengunduh skrip, jalankan dengan perintah:  
-   ```bash  
-   python script.py  
-   ```
+## Cara Instalasi dan Penggunaan
 
-3. **Autentikasi Google**  
-   Program akan meminta autentikasi Google untuk mengakses Google Drive Anda.
+### 1. **Kunjungi Google Colab**
+Buka [Google Colab](https://colab.research.google.com/) untuk menjalankan program ini. Google Colab memungkinkan Anda menjalankan skrip Python langsung di cloud tanpa perlu pengaturan lokal.
 
-4. **Pilih Folder**  
-   Pilih folder yang ingin diproses dengan memasukkan nomor atau nama folder yang muncul setelah autentikasi.
+### 2. **Unduh Skrip dengan cURL**
+Jalankan perintah berikut di Google Colab untuk mengunduh skrip Python ini dari GitHub:  
+```bash
+!curl -O https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/script.py
+```
+> **Catatan**: Ganti `USERNAME` dan `REPOSITORY` dengan nama pengguna dan repositori GitHub yang sesuai.
 
-5. **Proses Duplikat**  
-   Program akan memindai dan memilih **file yang terlama diupload** dan **mengeluarkan file lainnya** dari folder (file tetap ada di Drive).
+### 3. **Jalankan Program**
+Setelah skrip diunduh, jalankan program menggunakan perintah berikut:  
+```python
+!python script.py
+```
 
-6. **Unduh Hasil**  
-   Anda akan diberikan opsi untuk mengunduh hasil deteksi duplikat dalam file teks.
+### 4. **Ikuti Langkah-langkah Berikut**
+1. **Login ke Akun Google Drive**: Saat program meminta otentikasi, ikuti petunjuk untuk login.
+2. **Pilih Folder untuk Dipindai**: Program akan menampilkan daftar folder utama dan pintasan di My Drive Anda. Pilih folder dengan mengetikkan nomor atau nama folder.
+3. **Proses File Duplikat**: Program akan memindai folder dan subfolder, mendeteksi file duplikat berdasarkan nama, memilih file terlama untuk dipertahankan, dan mengeluarkan file lain dari folder.
+4. **Unduh Laporan (Opsional)**: Setelah proses selesai, Anda dapat mengunduh laporan hasil scan sebagai file teks.
 
 ## Catatan Penting
-
-1. **File yang Dikeluarkan dari Folder**:  
-   - File tidak dihapus, hanya **dikeluarkan dari folder** dan tetap ada di Google Drive.
-   - Jika Anda adalah pengunggah, file akan muncul di My Drive Anda.  
-   - Untuk file yang diunggah oleh orang lain, file mungkin tidak muncul di My Drive Anda dan akan kembali ke pengunggah asli.
-
-2. **Persiapkan Struktur Folder**:  
-   - Program akan memindai semua folder dan subfolder, termasuk folder pintasan.
-   - Jika ingin memindai folder tertentu, buat pintasan folder ke My Drive.
-
-3. **Uji Program Terlebih Dahulu**:  
-   - Cobalah program pada folder percobaan sebelum digunakan pada folder asli untuk menghindari kesalahan.
